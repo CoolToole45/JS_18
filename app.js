@@ -167,14 +167,12 @@ function angryProfessor(k, a) {
     for(let i = 0; i < a.length; i++){
         if(a[i] <= 0) {
             result++;
-            if(result >= k){
-                result = "NO";
-                return result;
-            }else {
-                result = "YES";
-                return result;
-            }
         }
+    }
+    if(result >= k){
+      return "NO";
+    }else {
+      return "YES";
     }
 }
 
