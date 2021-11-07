@@ -134,15 +134,18 @@ function startAutoSliding() {
   }
 }
 
-// function stopAutoOnMouseover() {
-//   if(startAutoSliding()) {
-//     startAutoSliding === null;
-//   }
-// }
+/////////////////////////////////////////////////////////////////
+const mouseTarget = document.querySelector(".slide-item");
 
 function stopAutoSliding() {
-  clearInterval(intervalId);
-  intervalId = null;
+  if(startAutoSliding) {
+    clearInterval(intervalId);
+    intervalID = null;
+  }
 }
+
+mouseTarget.addEventListener('mouseenter', startAutoSliding);
+//////////////////////////////////////////////////////////////////
+
 stopBtn.addEventListener('click', stopAutoSliding);
 startBtn.addEventListener('click', startAutoSliding);

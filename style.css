@@ -6,6 +6,11 @@
     color: red;
 }
 
+#localTime {
+    font-size: 50px;
+    color: rgb(28, 153, 255);
+}
+
 body{
     margin: 0;
     padding: 0;
