@@ -149,3 +149,33 @@ mouseTarget.addEventListener('mouseenter', startAutoSliding);
 
 stopBtn.addEventListener('click', stopAutoSliding);
 startBtn.addEventListener('click', startAutoSliding);
+
+
+// Task 4:
+// 4. (optionsal) მოცემულია რიცხვების მასივი const students = [-1, -3, 4, 2], დაწერეთ ფუნქცია angryProfessor(k, stundent){} რომელსაც გადაეცემა 2 პარამეტრი k - (მინიმალური რაოდენობა სტუდენტების რომ ლექცია ჩატარდეს) და students (სტუდენტების მასივი რიცხვების სახით)
+//  განმარტება: - students მასივში 0 და ყველა ნაგატიური რიცხვი ნიშნავს რომ სტუდენტი ლექციას ესწრება 1 დან ზემოთ 2, 3 .... ნიშნავს რომ აცცენს
+ 
+// დავალება: დავითვალოთ სტუდენტების რაოდენობა რომელიც ესწრება ლექციას
+// ფუნქციიდან დავაბრუნოთ: თუ დამსწრე სტუდენტების რაოდენობა ნაკლებია k-ზე მაშინ დაბრუნდეს "YES" თუ არა მაშინ "NO"
+
+let n = 4;
+let k = 3;
+const a = [-1, -3, 4, 2];
+
+function angryProfessor(k, a) {
+    let result = 0;
+    for(let i = 0; i < a.length; i++){
+        if(a[i] <= 0) {
+            result++;
+            if(result >= k){
+                result = "NO";
+                return result;
+            }else {
+                result = "YES";
+                return result;
+            }
+        }
+    }
+}
+
+console.log(angryProfessor(k, a));
