@@ -89,3 +89,26 @@ body{
 #next:hover{
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+#localTime {
+    text-align: center;
+}
+
+.slideButtonSelector {
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-bottom: 40px;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.slb {
+    border: 25px solid rgb(182, 182, 182);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.slb:hover {
+    border-color: grey;
+}

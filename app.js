@@ -135,6 +135,7 @@ function startAutoSliding() {
 }
 
 /////////////////////////////////////////////////////////////////
+
 const mouseTarget = document.querySelector(".slide-item");
 
 function stopAutoSliding() {
@@ -145,10 +146,21 @@ function stopAutoSliding() {
 }
 
 mouseTarget.addEventListener('mouseenter', startAutoSliding);
-//////////////////////////////////////////////////////////////////
-
 stopBtn.addEventListener('click', stopAutoSliding);
 startBtn.addEventListener('click', startAutoSliding);
+
+//////////////////////////////////////////////////////////////////
+
+
+
+
+// Task 3:
+
+function btmSlide(e) {
+  renderSlider(activeIndex = e - 1);
+}
+
+
 
 
 // Task 4:
