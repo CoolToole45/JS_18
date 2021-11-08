@@ -136,7 +136,7 @@ function startAutoSliding() {
 
 /////////////////////////////////////////////////////////////////
 
-const mouseTarget = document.querySelector(".slide-item");
+const mouseTarget = document.querySelector(".slide-area");
 
 function stopAutoSliding() {
   if(startAutoSliding) {
@@ -145,7 +145,9 @@ function stopAutoSliding() {
   }
 }
 
-mouseTarget.addEventListener('mouseenter', startAutoSliding);
+mouseTarget.addEventListener('mouseenter', stopAutoSliding);
+mouseTarget.addEventListener('mouseleave', startAutoSliding);
+
 stopBtn.addEventListener('click', stopAutoSliding);
 startBtn.addEventListener('click', startAutoSliding);
 
